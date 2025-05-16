@@ -1,19 +1,20 @@
 /* --- IMPORTS --- */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* --- VARIABLES --- */
 :root {
 
     /* COLORS */
-    --primaryColor: gray;
-    --secondaryColor: lightGray;
-    --accentColor: lightSlateGray;
-    --interactableColor: darkSlateGrey;
-    --hoverButtonColor: dimGray;
-    --disableButtonColor: silver;
+    --primaryColor: #EBEFE8;
+    --primaryColorMedium: #94A987;
+    --primaryColorDark: #425139;
+    --secondaryColor: #EBE5E0;
+    --accentColor: #F27405;
+    --hoverButtonColor: #F59037;
+    --disableButtonColor: #b6865c;
     --backgroundColor: whiteSmoke;
-    --baseTextDarkColor: black;
+    --baseTextDarkColor: #3C3C3C;
 
 
     /* TEXT  */
@@ -21,14 +22,14 @@
     --baseTextSizeMobile: .9rem;
 
     /* SPACING */
-    --smallSpacing: 10px;
-    --standardSpacing: 16px;
-    --mediumSpacing: 24px;
-    --largeSpacing: 35px;
-    --xLargeSpacing: 50px;
+    --spacing8: 8px;
+    --spacing16: 16px;
+    --spacing24: 24px;
+    --spacing32: 32px;
+    --spacing64: 64px;
 
     /* DETAILS */
-    --borderRadius: 3px;
+    --borderRadius: 10px;
     --round: 50%;
     --shadow: 3px 3px 8px gray;
 }
@@ -38,6 +39,7 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    text-wrap: balance;
 }
 
 .fullWidth {
@@ -45,14 +47,20 @@
 }
 
 /* --- GENERALS --- */
-
 body {
     margin: 0;
+    color: var(--baseTextDarkColor);
 }
 
-main {}
+main {
+    display: grid;
+    grid-template-columns: 15px repeat(4, 1fr) 15px;
+}
 
-section {}
+section {
+    grid-column: 2 / -2;
+
+}
 
 article {}
 
@@ -66,12 +74,13 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
-    grid-column: 2 / -2;
+h6 {
+    font-family: "Poppins", sans-serif;
 }
 
-h1 {}
+h1 {
+    margin: var(--spacing16) 0 0 0;
+}
 
 h2 {}
 
@@ -79,6 +88,12 @@ h3 {}
 
 p {
     max-width: 75ch;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+}
+
+.index h1 {
+    color: var(--accentColor);
 }
 
 /* --- BUTTONS --- */
