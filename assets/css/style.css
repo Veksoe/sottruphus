@@ -126,15 +126,20 @@ img {
 /* --- BUTTONS --- */
 button {
     cursor: pointer;
-    border: var(--accentColor);
+    border: 1px solid var(--accentColor);
+    padding: var(--spacing8) var(--spacing16);
     border-radius: var(--borderRadius);
     background: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
 }
 
 a .btn {
-    border: var(--accentColor);
+    border: 1px solid var(--accentColor);
+    padding: var(--spacing8) var(--spacing16);
     border-radius: var(--borderRadius);
     background: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
+
 }
 
 a .btn:hover {}
@@ -144,6 +149,7 @@ button.mobil-menu {
     border: none;
     padding: var(--spacing8);
     font-size: 1.5rem;
+    box-shadow: none;
 }
 
 button.mobil-menu-close {
@@ -154,6 +160,7 @@ button.mobil-menu-close {
     background: none;
     font-size: 1.5rem;
     padding: var(--spacing8);
+    box-shadow: none;
 
 }
 
