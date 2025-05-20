@@ -271,7 +271,7 @@ footer p {
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .value {
@@ -357,4 +357,35 @@ footer p {
 .who-are-we .item3 {
     grid-row: 2/5;
     grid-column: 4/6;
+}
+
+.who-are-we .bullet {
+    display: flex;
+    gap: var(--spacing16);
+    align-items: center;
+}
+
+.who-are-we .bullet i {
+    background: var(--primaryColor);
+    padding: var(--spacing8);
+    color: var(--primaryColorDark);
+    border-radius: var(--round);
+}
+
+
+
+.mySlides {
+    display: none
+}
+
+.w3-left,
+.w3-right,
+.w3-badge {
+    cursor: pointer
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0
 }
