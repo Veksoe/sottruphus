@@ -26,6 +26,7 @@
     --spacing16: 16px;
     --spacing24: 24px;
     --spacing32: 32px;
+    --spacing48: 48px;
     --spacing64: 64px;
 
     /* DETAILS */
@@ -39,7 +40,6 @@
 *::after,
 *::before {
     box-sizing: border-box;
-    text-wrap: balance;
 }
 
 .fullWidth {
@@ -55,11 +55,12 @@ body {
 main {
     display: grid;
     grid-template-columns: 15px repeat(4, 1fr) 15px;
+    row-gap: var(--spacing16);
 }
 
 header {
 
-    padding: var(--spacing16);
+    padding: var(--spacing8) var(--spacing16);
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -67,7 +68,6 @@ header {
     width: 100%;
     transition: top .3s;
 }
-
 
 
 section {
@@ -81,6 +81,22 @@ a {}
 
 i {}
 
+
+img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.logo {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+
 /* --- TEXT --- */
 h1,
 h2,
@@ -93,11 +109,20 @@ h6 {
 
 h1 {
     margin: var(--spacing16) 0 0 0;
+    margin-bottom: 0;
+
 }
 
-h2 {}
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
 
-h3 {}
+h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+
+}
 
 p {
     max-width: 75ch;
@@ -108,6 +133,7 @@ p {
 a {
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
+    color: var(--baseTextDarkColor);
 }
 
 .index h1 {
@@ -116,12 +142,6 @@ a {
 
 
 
-img {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
-}
 
 /* --- BUTTONS --- */
 button {
@@ -189,11 +209,115 @@ nav a {
     color: var(--baseTextDarkColor)
 }
 
-.logo {
-    height: 50px;
+
+/* --- FOOTER --- */
+
+footer {
+    background: var(--secondaryColor);
+    margin-top: var(--spacing16);
+    padding: var(--spacing16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing8);
+}
+
+footer>div {
+    display: flex;
+    gap: var(--spacing8);
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* --- HERO --- */
 .hero {
     height: 225px;
+}
+
+/* --- FORSIDE --- */
+.index .target-audience {
+    display: flex;
+    gap: var(--spacing16);
+    align-items: center;
+    margin-left: var(--spacing16);
+
+}
+
+.index .target-audience i {
+    font-size: 1.5rem;
+    color: var(--accentColor);
+}
+
+/* --- VÆRIDER --- */
+.values {
+    background-image: url("../img/Hus-detalje.svg");
+    background-size: cover;
+    padding: var(--spacing48) var(--spacing16) var(--spacing32);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.value {
+    background: var(--primaryColor);
+    padding: var(--spacing16);
+    border-radius: var(--borderRadius);
+    text-align: center;
+    color: var(--primaryColorDark);
+    width: 170px;
+    height: 100%;
+}
+
+.value-container {
+    width: 100%;
+    overflow: auto;
+}
+
+.value-container::-webkit-scrollbar {
+    width: 80px;
+    height: 2px;
+}
+
+.value-container::-webkit-scrollbar-thumb {
+    background: var(--primaryColorMedium);
+    border-radius: 10px;
+}
+
+.value-container::-webkit-scrollbar-track {
+    background: var(--primaryColor);
+}
+
+.value-holder {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing16);
+    padding-bottom: 5px;
+    height: 200px;
+}
+
+.values i {
+    position: absolute;
+    bottom: var(--spacing8);
+    right: 0;
+    animation: swipe 3s ease-in-out infinite;
+}
+
+.value h3,
+.value p {
+    margin: 0;
+}
+
+@keyframes swipe {
+    60% {
+        transform: translate(-20px)
+    }
+
+    100% {
+        transform: translate(0px)
+    }
 }
