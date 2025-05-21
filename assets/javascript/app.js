@@ -13,7 +13,9 @@ mobilMenuBtnEl.addEventListener("click", () => {
 mobilMenuCloseEl.addEventListener("click", () => {
     mobilNavEl.style.transform = "translateX(500px)"
     bodyEl.style.overflow = "visible";
-    valuesContainerEl.style.zIndex = "1";
+    setTimeout(() => {
+        valuesContainerEl.style.zIndex = "1";
+    }, 3000)
 
 
 })
