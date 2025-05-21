@@ -27,6 +27,17 @@ mobilMenuCloseEl.addEventListener("click", () => {
 
 
 })
+if (appartmentEl) {
+    prevImgBtnEL.addEventListener("click", () => {
+        plusSlider(-1);
+    })
+
+    nextImgBtnEL.addEventListener("click", () => {
+        plusSlider(1);
+    })
+    //Manual Slide
+    setSlider();
+}
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 window.onscroll = function () {
@@ -57,14 +68,6 @@ function currentSlider(n) {
     showSliders(sliderIndex = n);
 }
 
-prevImgBtnEL.addEventListener("click", () => {
-    plusSlider(-1);
-})
-nextImgBtnEL.addEventListener("click", () => {
-    plusSlider(1);
-
-
-})
 
 function showSliders(n) {
     let i;
@@ -82,6 +85,5 @@ function showSliders(n) {
     dots[sliderIndex - 1].className += " active";
 }
 
-//Manual Slide
-setSlider();
+
 
