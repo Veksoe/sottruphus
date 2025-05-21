@@ -3,14 +3,18 @@ const bodyEl = document.querySelector("body");
 const mobilMenuBtnEl = document.querySelector(".mobil-menu");
 const mobilNavEl = document.querySelector(".mobil-nav");
 const mobilMenuCloseEl = document.querySelector(".mobil-menu-close");
+const valuesContainerEl = document.querySelector(".values");
 
 mobilMenuBtnEl.addEventListener("click", () => {
     mobilNavEl.style.transform = "translateX(0px)"
     bodyEl.style.overflow = "hidden";
+    valuesContainerEl.style.zIndex = "-1";
 })
 mobilMenuCloseEl.addEventListener("click", () => {
     mobilNavEl.style.transform = "translateX(500px)"
     bodyEl.style.overflow = "visible";
+    valuesContainerEl.style.zIndex = "1";
+
 
 })
 
