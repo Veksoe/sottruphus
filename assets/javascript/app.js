@@ -4,17 +4,25 @@ const mobilMenuBtnEl = document.querySelector(".mobil-menu");
 const mobilNavEl = document.querySelector(".mobil-nav");
 const mobilMenuCloseEl = document.querySelector(".mobil-menu-close");
 const valuesContainerEl = document.querySelector(".values");
+const appartmentEl = document.querySelector(".slideshow-container ")
+const prevImgBtnEL = document.querySelector(".appartment .prev")
+const nextImgBtnEL = document.querySelector(".appartment .next")
+
+let sliderIndex = 1;
+
 
 mobilMenuBtnEl.addEventListener("click", () => {
     mobilNavEl.style.transform = "translateX(0px)"
     bodyEl.style.overflow = "hidden";
-    valuesContainerEl.style.zIndex = "-1";
+    if (valuesContainerEl) { valuesContainerEl.style.zIndex = "-1"; }
+    if (appartmentEl) { appartmentEl.style.zIndex = "-1"; }
 })
 mobilMenuCloseEl.addEventListener("click", () => {
     mobilNavEl.style.transform = "translateX(500px)"
     bodyEl.style.overflow = "visible";
     setTimeout(() => {
-        valuesContainerEl.style.zIndex = "1";
+        if (valuesContainerEl) { valuesContainerEl.style.zIndex = "1"; }
+        if (appartmentEl) { appartmentEl.style.zIndex = "1"; }
     }, 3000)
 
 
@@ -35,30 +43,45 @@ window.onscroll = function () {
 
 
 
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
+function setSlider() {
+    showSliders(sliderIndex);
 }
 
-function currentDiv(n) {
-    showDivs(slideIndex = n);
+//slider image index
+function plusSlider(n) {
+    showSliders(sliderIndex += n);
 }
 
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = x.length }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+//dot index
+function currentSlider(n) {
+    showSliders(sliderIndex = n);
+}
+
+prevImgBtnEL.addEventListener("click", () => {
+    plusSlider(-1);
+})
+nextImgBtnEL.addEventListener("click", () => {
+    plusSlider(1);
+
+
+})
+
+function showSliders(n) {
+    let i;
+    const slides = document.querySelectorAll(".appartment .manual-slider");
+    const dots = document.querySelectorAll(".appartment .dot");
+    if (n > slides.length) { sliderIndex = 1 }
+    if (n < 1) { sliderIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-white", "");
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-    x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " w3-white";
+    slides[sliderIndex - 1].style.display = "block";
+    dots[sliderIndex - 1].className += " active";
 }
+
+//Manual Slide
+setSlider();
 

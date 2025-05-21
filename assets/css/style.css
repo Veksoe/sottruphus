@@ -84,7 +84,7 @@ i {}
 
 img {
     width: 100%;
-    /* height: 100%; */
+    max-height: 100%;
     object-position: center;
     object-fit: cover;
     border-radius: var(--borderRadius);
@@ -347,16 +347,21 @@ footer p {
 .who-are-we .item1 {
     grid-row: 1/3;
     grid-column: 2/4;
+    height: 100%;
 }
 
 .who-are-we .item2 {
     grid-row: 3/6;
     grid-column: 1/4;
+    height: 100%;
+
 }
 
 .who-are-we .item3 {
     grid-row: 2/5;
     grid-column: 4/6;
+    height: 100%;
+
 }
 
 .who-are-we .bullet {
@@ -372,20 +377,98 @@ footer p {
     border-radius: var(--round);
 }
 
-
-
-.mySlides {
-    display: none
+.who-are-we .appartment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.w3-left,
-.w3-right,
-.w3-badge {
-    cursor: pointer
+/* Slideshow */
+.appartment .sliders {
+    display: none;
+    width: 85%;
+    height: 100%;
+    margin: auto;
 }
 
-.w3-badge {
-    height: 13px;
-    width: 13px;
-    padding: 0
+.appartment .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    height: 200px;
+    width: 100%;
+}
+
+.appartment .prev,
+.appartment .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: var(--spacing8);
+    margin-top: -22px;
+    color: var(--baseTextDarkColor);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border: none;
+    box-shadow: none;
+}
+
+/* Position the "next button" to the right */
+.appartment .next {
+    right: 0;
+    animation: point-right 1s ease-in-out infinite;
+}
+
+.appartment .prev {
+    animation: point-left 1s ease-in-out infinite;
+}
+
+
+.appartment .prev:hover,
+.appartment .next:hover {
+    transform: scale(1.1);
+}
+
+.appartment .prev:active,
+.appartment .next:active {
+    transform: scale(.4);
+}
+
+/* The dots/bullets/indicators */
+.appartment .dot {
+    cursor: pointer;
+    height: 7px;
+    width: 7px;
+    margin: 4px 2px;
+    background-color: var(--primaryColorMedium);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.appartment .active,
+.appartment .dot:hover {
+    background-color: var(--primaryColorDark);
+}
+
+@keyframes point-right {
+    50% {
+        transform: translateX(1px);
+    }
+
+    10% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes point-left {
+    50% {
+        transform: translateX(1px);
+    }
+
+    10% {
+        transform: translateX(0px);
+    }
 }
