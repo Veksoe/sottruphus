@@ -1,0 +1,71 @@
+:root {
+
+    /* COLORS */
+    --primaryColor: #EBEFE8;
+    --primaryColorMedium: #94A987;
+    --primaryColorDark: #425139;
+    --secondaryColor: #EBE5E0;
+    --accentColor: #F27405;
+    --hoverButtonColor: #F59037;
+    --disableButtonColor: #b6865c;
+    --backgroundColor: #f5f5f5;
+    --baseTextDarkColor: #3C3C3C;
+
+
+    /* SPACING */
+    --spacing8: 8px;
+    --spacing16: 16px;
+    --spacing24: 24px;
+    --spacing32: 32px;
+    --spacing48: 48px;
+    --spacing64: 64px;
+
+    /* DETAILS */
+    --borderRadius: 10px;
+    --round: 50%;
+}
+
+.contact-page .contact-info>div {
+    display: flex;
+    gap: var(--spacing8);
+    align-items: center;
+}
+
+.contact-page .contact-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-page section .item1 {
+    grid-column: 1/-1;
+}
+
+.contact-page .team-container {
+    display: flex;
+    gap: var(--spacing16);
+    flex-wrap: wrap;
+}
+
+.contact-page .team-card {
+    width: calc(100%/2 - 16px);
+}
+
+.contact-page .team-card img {
+    border-radius: 2px;
+}
+
+.contact-page .team-card h4,
+.contact-page .team-card p {
+    margin: 0;
+    text-align: center;
+}
+
+.contact-page .team-card h4 {
+    font-size: .9rem;
+    color: grey;
+    font-weight: 400;
+}
+
+.contact-page .team-card p {
+    font-size: .8rem;
+}
