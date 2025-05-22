@@ -30,19 +30,37 @@
             <a href="./index.html" class="logo"><img src="./assets/img/Søttruphus_logo.svg" alt="Søttruphus Logo"
                     height="50px"></a>
             <button class="mobil-menu-close"><i class="fa-solid fa-xmark"></i></button>
-            <button><i class="fa-solid fa-user"></i> Log ind</button>
+            <button id="myBtn"><i class="fa-solid fa-user"></i> Log ind</button>
             <a href="./hvem-er-vi.html">Hvem er vi?</a>
-            <a href="#">Personale</a>
-            <a href="./til-kommende-beboere.html">Til Kommende Beboere</a>
-            <a href="#">Faglig Tilgang </a>
-            <a href="#">Nyt fra Søttruphus</a>
-            <a href="#">Kontakt</a>
+            <a href="./personale.html">Personale</a>
+            <a href="./til-kommende-beboere.html">Til kommende beboere</a>
+            <a href="./faglig-tilgang.html">Faglige tilgange </a>
+            <a href="./nyt-fra-sotruphus.html">Nyt fra Søttruphus</a>
+            <a href="./kontakt.html">Kontakt</a>
         </nav>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="modal-close"><i class="fa-solid fa-xmark"></i></span>
+                <img src="./assets/img/Søttruphus_logo.svg" alt="" class="logo">
+                <h2>Login</h2>
+                <form>
+                    <label for="email" class="bold">Email</label>
+                    <input type="text" id="email" name="email">
+                    <label for="password" class="bold">Password</label>
+                    <input type="text" id="password" name="password">
+                    <a href="#">Glemt din kode?</a>
+                    <input type="submit" value="Log ind" class="bold">
+                </form>
+            </div>
+
+        </div>
     </header>
 
-    <main class="index">
+    <main class="who-are-we">
         <section class="hero fullWidth">
-            <img src="./assets/img/Billede_af_stedet.jpg" alt="Søttruphus' facade ">
+            <img src="./assets/img/Personer_Der_Cykler.JPG" alt="Søttruphus' facade ">
         </section>
         <section class="primary-bg">
             <h1>Historie</h1>
@@ -65,6 +83,22 @@
                 rundt, og alle beboere har fast bopæl på stedet.
                 Botilbuddet er indrettet i en tidligere landejendom med en stor have og en solrig terrasse, hvilket
                 giver gode rammer for ro, tryghed og trivsel i hverdagen.</p>
+        </section>
+        <section>
+            <h3>Søttruphus modtager voksne borgere efter Serviceloven §107 og §108.</h3>
+            <div class="target-audience">
+                <i class="fa-solid fa-section"></i>
+                <p><span class="bold">Serviceloven § 107:</span> Søttruphus tilbyder midlertidige botilbud til voksne
+                    med nedsat psykisk
+                    funktionsevne, f.eks. borgere med autismespektrumforstyrrelser.</p>
+            </div>
+            <div class="target-audience">
+                <i class="fa-solid fa-section"></i>
+                <p><span class="bold">Serviceloven § 108:</span> Søttruphus tilbyder længerevarende botilbud til
+                    borgere med varigt behov for
+                    støtte og en struktureret hverdag.
+                </p>
+            </div>
         </section>
         <!-- Tredjeparts kode: https://dev.to/capscode/horizontal-swiper-using-html-css-only-16b4 -->
         <section class="values">
@@ -114,7 +148,20 @@
                 føler sig hjemme.
             </p>
         </section>
-
+        <section>
+            <a href="./personale.html" class="fep">
+                <img src="./assets/img/ukendt" alt="">
+                <h3>Personale</h3>
+            </a>
+            <a href="./faglig-tilgang.html" class="fep">
+                <img src="./assets/img/Teamwork.jpg" alt="">
+                <h3>Faglige tilgange</h3>
+            </a>
+            <a href="./til-kommende-beboere.html" class="fep">
+                <img src="./assets/img/ansat_beboer_gar_ude.jpg" alt="">
+                <h3>Til kommende beboere</h3>
+            </a>
+        </section>
     </main>
 
     <footer>

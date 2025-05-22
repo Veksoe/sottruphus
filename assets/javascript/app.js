@@ -46,7 +46,7 @@ window.onscroll = function () {
         document.querySelector("header").style.top = "0";
     } else {
         document.querySelector("header").style.top = "-90px";
-        document.querySelector("header").style.background = "var(--secondaryColor)";
+        document.querySelector("header").style.background = "white";
 
     }
     prevScrollpos = currentScrollPos;
@@ -116,15 +116,15 @@ window.addEventListener('click', (event) => {
 // Fanger data-dialog værdien og sammenligner den med dialogens data-id. Hvis de matcher, åbnes den tilhørende dialogboks 
 document.querySelectorAll('.metoder').forEach(kort => {
     kort.addEventListener('click', () => {
-      const targetId = kort.dataset.dialog;
-      const dialog = document.querySelector(`.metode-dialog[data-id="${targetId}"]`);
-      if (dialog) dialog.showModal();
+        const targetId = kort.dataset.dialog;
+        const dialog = document.querySelector(`.metode-dialog[data-id="${targetId}"]`);
+        if (dialog) dialog.showModal();
     });
-  });
-  
-  // Luk dialogen, når der klikkes på lukkeknappen
-  document.querySelectorAll('.metode-dialog .close-btn').forEach(btn => {
+});
+
+// Luk dialogen, når der klikkes på lukkeknappen
+document.querySelectorAll('.metode-dialog .close-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      btn.closest('dialog').close();
+        btn.closest('dialog').close();
     });
-  });
+});
