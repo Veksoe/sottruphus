@@ -1,0 +1,380 @@
+
+
+/* --- VARIABLES --- */
+:root {
+
+    /* COLORS */
+    --primaryColor: #EBEFE8;
+    --primaryColorMedium: #94A987;
+    --primaryColorDark: #425139;
+    --secondaryColor: #EBE5E0;
+    --accentColor: #F27405;
+    --hoverButtonColor: #F59037;
+    --disableButtonColor: #b6865c;
+    --backgroundColor: #f5f5f5;
+    --baseTextDarkColor: #3C3C3C;
+    --metodeOrange:#FAEADB;
+    --textCardsBrown:#9E4C03;
+
+
+    /* SPACING */
+    --spacing8: 8px;
+    --spacing16: 16px;
+    --spacing24: 24px;
+    --spacing32: 32px;
+    --spacing48: 48px;
+    --spacing64: 64px;
+
+    /* DETAILS */
+    --borderRadius: 10px;
+    --round: 50%;
+    --shadow: 3px 3px 8px gray;
+}
+
+/* --- UTILLITIES --- */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.fullWidth {
+    grid-column: 1/-1;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* --- GENERALS --- */
+body {
+    margin: 0;
+    color: var(--baseTextDarkColor);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 15px repeat(4, 1fr) 15px;
+    row-gap: var(--spacing16);
+}
+
+header {
+
+    padding: var(--spacing8) var(--spacing16);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top .3s;
+}
+
+
+section {
+    grid-column: 2 / -2;
+
+}
+
+article {}
+
+a {}
+
+i {}
+
+
+img {
+    width: 100%;
+    max-height: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+}
+
+.logo {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+
+/* --- TEXT --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    margin: var(--spacing16) 0 0 0;
+    margin-bottom: 0;
+
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+
+}
+
+p {
+    max-width: 75ch;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+}
+
+h1~p,
+h2~p,
+h3~p {
+    margin-top: 0;
+}
+
+a {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    color: var(--baseTextDarkColor);
+}
+
+.index h1 {
+    color: var(--accentColor);
+}
+
+
+
+
+/* --- BUTTONS --- */
+button {
+    cursor: pointer;
+    border: 1px solid var(--accentColor);
+    padding: var(--spacing8) var(--spacing16);
+    border-radius: var(--borderRadius);
+    background: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
+}
+
+a .btn {
+    border: 1px solid var(--accentColor);
+    padding: var(--spacing8) var(--spacing16);
+    border-radius: var(--borderRadius);
+    background: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
+
+}
+
+
+button.mobil-menu {
+    background: none;
+    border: none;
+    padding: var(--spacing8);
+    font-size: 1.5rem;
+    box-shadow: none;
+}
+
+button.mobil-menu-close {
+    position: absolute;
+    top: var(--spacing24);
+    right: var(--spacing24);
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    padding: var(--spacing8);
+    box-shadow: none;
+
+}
+
+/* --- NAV --- */
+.mobil-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--secondaryColor);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing8);
+    padding: var(--spacing16);
+    width: 100%;
+    height: 100vh;
+    transition: .5s;
+    transform: translateX(500px);
+    align-items: center;
+    z-index: 1000;
+}
+
+nav a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--baseTextDarkColor)
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+    background: var(--secondaryColor);
+    margin-top: var(--spacing16);
+    padding: var(--spacing16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing8);
+}
+
+footer>div {
+    display: flex;
+    gap: var(--spacing8);
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- HERO --- */
+.hero {
+    height: 225px;
+}
+
+.hero img {
+    border-radius: 0;
+}
+
+
+/* Faglige Tilgange */ 
+/* Metode cards */ 
+.metoder {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+    margin: 1rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .metoder:hover {
+    transform: scale(1.03);
+  }
+  
+  .metode-billede {
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(to bottom, rgba(124, 77, 12, 0.4), rgba(97, 55, 7, 0.7)),
+      url('../img/socialhistorier.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    flex-direction: column;
+  }
+  
+  .metodeTitel {
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hover-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color:var(--metodeOrange);
+    transition: height 0.4s ease-in-out;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .metoder:hover .metodeTitel {
+    display: none;
+  }
+  
+  .metode-introbeskrivelse {
+    color:var(--textCardsBrown);
+    font-size: 0.95rem;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Ved hover */
+  .metoder:hover .hover-overlay {
+    height: 100%;
+  }
+  
+  .metoder:hover .metode-introbeskrivelse {
+    opacity: 1;
+  }
+
+  .metode-dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    background: var(--metodeOrange);
+    color: var(--textCardsBrown);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif;
+    animation: fadeIn 0.3s ease;
+    position: relative;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #eee;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  
+  
+  /* Mobilvenligt */
+  @media (max-width: 768px) {
+    .metoder {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .metode-billede {
+      height: 220px;
+      padding: 1rem;
+    }
+  
+    .metodeTitel {
+      font-size: 1.3rem;
+    }
+  
+    .metode-introbeskrivelse {
+      font-size: 0.85rem;
+    }
+  }
