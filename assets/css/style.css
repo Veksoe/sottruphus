@@ -26,7 +26,7 @@
     --spacing64: 64px;
 
     /* DETAILS */
-    --borderRadius: 10px;
+    --borderRadius: 6px;
     --round: 50%;
     --shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
 }
@@ -44,6 +44,16 @@
 
 .bold {
     font-weight: 700;
+}
+
+.primary-bg {
+    background: var(--primaryColor);
+    padding: var(--spacing16);
+    border-radius: var(--borderRadius);
+}
+
+.centered {
+    text-align: center;
 }
 
 /* --- GENERALS --- */
@@ -71,8 +81,8 @@ header {
     transition: top .3s;
     z-index: 2;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.192);
+    background: white;
 }
-
 
 section {
     grid-column: 2 / -2;
@@ -508,6 +518,39 @@ a.fep:active {
     flex-direction: column;
     align-items: center;
 }
+
+.upcomming-citizens .activities {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing16);
+}
+
+.upcomming-citizens .activity {
+    display: flex;
+    flex-direction: column;
+    background: var(--primaryColor);
+    padding: var(--spacing24);
+    border-radius: var(--borderRadius);
+}
+
+.upcomming-citizens .activity h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.upcomming-citizens .activity p {
+    margin: 0;
+}
+
+.upcomming-citizens .activity .day-type {
+    color: var(--primaryColorDark);
+    font-weight: 500;
+}
+
+.upcomming-citizens .activity i {
+    font-size: 2rem;
+}
+
 
 /* Slideshow */
 .appartment .sliders {
