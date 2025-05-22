@@ -30,14 +30,30 @@
             <a href="./index.html" class="logo"><img src="./assets/img/Søttruphus_logo.svg" alt="Søttruphus Logo"
                     height="50px"></a>
             <button class="mobil-menu-close"><i class="fa-solid fa-xmark"></i></button>
-            <button><i class="fa-solid fa-user"></i> Log ind</button>
+            <button class="login-btn"><i class="fa-solid fa-user"></i> Log ind</button>
             <a href="./hvem-er-vi.html">Hvem er vi?</a>
-            <a href="#">Personale</a>
-            <a href="./til-kommende-beboere.html">Til Kommende Beboere</a>
-            <a href="#">Faglig Tilgang </a>
+            <a href="./personale.html">Personale</a>
+            <a href="./til-kommende-beboere.html">Til kommende beboere</a>
+            <a href="./faglig-tilgang.html">Faglige tilgange </a>
             <a href="./nyt-fra-sotruphus.html">Nyt fra Søttruphus</a>
             <a href="./kontakt.html">Kontakt</a>
         </nav>
+        <dialog class="modal-content">
+            <!-- Modal content -->
+
+            <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <img src="./assets/img/Søttruphus_logo.svg" alt="" class="logo">
+            <h2>Login</h2>
+            <form>
+                <label for="email" class="bold">Email</label>
+                <input type="text" id="email" name="email">
+                <label for="password" class="bold">Password</label>
+                <input type="text" id="password" name="password">
+                <a href="#">Glemt din kode?</a>
+                <input type="submit" value="Log ind" class="bold">
+            </form>
+
+        </dialog>
     </header>
 
     <main class="contact-page">

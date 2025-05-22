@@ -85,31 +85,20 @@ function showSliders(n) {
 }
 
 
-// Get the modal
-var modal = document.querySelector("#myModal");
+const closeMenuModalBtnEl = document.querySelector("header .modal-close")
+const openLoginEl = document.querySelector(".login-btn")
+const loginModalEl = document.querySelector("dialog")
+const closeMethodModalBtnEl = document.querySelector(".metode-dialog .modal-close")
 
-// Get the button that opens the modal
-var btn = document.querySelector("#myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.querySelector(".modal-close")
-
-// When the user clicks on the button, open the modal
-btn.addEventListener('click', () => {
-    modal.style.display = "block";
+openLoginEl.addEventListener('click', () => {
+    loginModalEl.showModal();
 })
 
-// When the user clicks on <span> (x), close the modal
-span.addEventListener('click', () => {
-    modal.style.display = "none";
+closeMenuModalBtnEl.addEventListener('click', () => {
+    closeMenuModalBtnEl.closest('dialog').close();
 })
 
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', (event) => {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-})
+
 // Dialog boks - metoder 
 //Åbn dialogen ved at lytte til click på kortet. 
 // Fanger data-dialog værdien og sammenligner den med dialogens data-id. Hvis de matcher, åbnes den tilhørende dialogboks 
@@ -117,13 +106,19 @@ document.querySelectorAll('.metoder').forEach(kort => {
     kort.addEventListener('click', () => {
         const targetId = kort.dataset.dialog;
         const dialog = document.querySelector(`.metode-dialog[data-id="${targetId}"]`);
-        if (dialog) dialog.showModal();
+        if (dialog) {
+            dialog.showModal();
+            bodyEl.style.overflow = "hidden";
+
+        }
     });
 });
 
 // Luk dialogen, når der klikkes på lukkeknappen
-document.querySelectorAll('.metode-dialog .close-btn').forEach(btn => {
+document.querySelectorAll('.metode-dialog .modal-close').forEach(btn => {
     btn.addEventListener('click', () => {
         btn.closest('dialog').close();
+        bodyEl.style.overflow = "visible";
+
     });
 });

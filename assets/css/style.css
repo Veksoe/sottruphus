@@ -11,6 +11,8 @@
     --primaryColorDark: #425139;
     --secondaryColor: #EBE5E0;
     --accentColor: #F27405;
+    --accentColorLight: #FBD5B4;
+    --accentColorDark: #9E4C03;
     --hoverButtonColor: #F59037;
     --disableButtonColor: #b6865c;
     --backgroundColor: #f5f5f5;
@@ -109,6 +111,10 @@ img {
     display: block;
     margin: 0 auto;
     width: fit-content;
+}
+
+::backdrop {
+    background: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -230,17 +236,6 @@ nav a {
 
 
 /* Login modal*/
-header .modal {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: rgba(0, 0, 0, 0.4);
-}
 
 header .modal-content {
     background-color: #fefefe;
@@ -584,7 +579,6 @@ a.fep:active {
     box-shadow: none;
 }
 
-/* Position the "next button" to the right */
 .appartment .next {
     right: 0;
     animation: point-right 1s ease-in-out infinite;
@@ -605,7 +599,6 @@ a.fep:active {
     transform: scale(.4);
 }
 
-/* The dots/bullets/indicators */
 .appartment .dot {
     cursor: pointer;
     height: 7px;
@@ -640,4 +633,87 @@ a.fep:active {
     10% {
         transform: translateX(0px);
     }
+}
+
+/* --- FAGLIGE TILGANG --- */
+.metoder {
+    position: relative;
+    width: 100%;
+    /* max-width: 320px; */
+    height: 200px;
+    margin: var(--spacing16) 0;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.metode-dialog {
+    border: none;
+    border-radius: 10px;
+    padding: var(--spacing48) var(--spacing32) var(--spacing32) var(--spacing32);
+    max-width: 500px;
+    width: 90%;
+    background: var(--accentColorLight);
+    color: var(--accentColorDark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif;
+    animation: fadeIn 0.3s ease;
+    margin-top: var(--spacing64);
+}
+
+.metode-billede {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.metoder .overlay {
+    background:
+        linear-gradient(to bottom, rgba(124, 77, 12, 0.4), rgba(97, 55, 7, 0.7));
+    width: 100%;
+    height: 100%;
+}
+
+.metode-introbeskrivelse {
+    color: var(--accentColorDark);
+    font-size: 0.95rem;
+    padding: var(--spacing16);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.metodeTitel {
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.metode-dialog .modal-close {
+    position: absolute;
+    top: var(--spacing16);
+    right: var(--spacing16);
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    padding: var(--spacing8);
+    box-shadow: none;
+
+}
+
+.metode-dialog .close:hover,
+.metode-dialog .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
