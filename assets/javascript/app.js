@@ -18,7 +18,7 @@ mobilMenuBtnEl.addEventListener("click", () => {
     if (appartmentEl) { appartmentEl.style.zIndex = "-1"; }
 })
 mobilMenuCloseEl.addEventListener("click", () => {
-    mobilNavEl.style.transform = "translateX(500px)"
+    mobilNavEl.style.transform = "translateX(110%)"
     bodyEl.style.overflow = "visible";
     setTimeout(() => {
         if (valuesContainerEl) { valuesContainerEl.style.zIndex = "1"; }
