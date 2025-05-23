@@ -868,3 +868,41 @@ a.fep:active {
 .contact-page .team-card p {
     font-size: .8rem;
 }
+
+
+@media only screen and (min-width: 700px) {
+    main {
+
+        grid-template-columns: 64px repeat(4, 1fr) 64px;
+        row-gap: var(--spacing32);
+    }
+
+
+    .hero,
+    .hero img {
+        height: 350px;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    main {
+
+        grid-template-columns: 15% repeat(12, 1fr) 15%;
+
+    }
+
+    .hero,
+    .hero img {
+        height: 500px;
+    }
+
+
+
+}
