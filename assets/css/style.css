@@ -146,7 +146,8 @@ h3 {
 
 }
 
-p {
+p,
+li {
     max-width: 75ch;
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
@@ -809,4 +810,78 @@ a.fep:active {
     font-size: .8rem;
     text-align: right;
     color: gray;
+}
+
+/* --- PERSONALE--- */
+
+
+.the-team {
+    background-color: var(--primaryColorMedium);
+    border-radius: var(--borderRadius);
+    padding: var(--spacing24);
+    margin-bottom: var(--spacing16);
+}
+
+.personelCards {
+    background-color: var(--primaryColor);
+    border-radius: var(--borderRadius);
+    text-align: center;
+    padding: var(--spacing16) var(--spacing8);
+}
+
+.personelCards i {
+    font-size: 3.5rem;
+    color: var(--primaryColorDark);
+}
+
+#personelCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* --- KONTAKT--- */
+.contact-page .contact-info>div {
+    display: flex;
+    gap: var(--spacing8);
+    align-items: center;
+}
+
+.contact-page .contact-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-page section .item1 {
+    grid-column: 1/-1;
+}
+
+.contact-page .team-container {
+    display: flex;
+    gap: var(--spacing16);
+    flex-wrap: wrap;
+}
+
+.contact-page .team-card {
+    width: calc(100%/2 - 16px);
+}
+
+.contact-page .team-card img {
+    border-radius: 2px;
+}
+
+.contact-page .team-card h4,
+.contact-page .team-card p {
+    margin: 0;
+    text-align: center;
+}
+
+.contact-page .team-card h4 {
+    font-size: .9rem;
+    color: grey;
+    font-weight: 400;
+}
+
+.contact-page .team-card p {
+    font-size: .8rem;
 }
