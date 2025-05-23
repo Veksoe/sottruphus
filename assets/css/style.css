@@ -355,9 +355,8 @@ a.fep {
     flex-direction: column;
     align-items: center;
     transition: .3s;
-    margin: var(--spacing16) 0;
+    margin: var(--spacing24) 0;
     padding-right: var(--spacing8);
-
 }
 
 a.fep img {
@@ -370,24 +369,8 @@ a.fep:active {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.253);
 }
 
-.index .fep {
-    display: flex;
-    gap: var(--spacing8);
-    align-items: center;
-}
-
-.index .fep>div {
-    width: 50%;
-}
-
-.index .fep h3,
-.index .fep p {
-    font-size: .8rem;
-}
-
-.index .fep img {
-    width: 50%;
-    height: 100%;
+.index .fep h3 {
+    margin: 0;
 }
 
 .news-page a.fep {
