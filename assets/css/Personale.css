@@ -1,0 +1,48 @@
+/* --- VARIABLES --- */
+:root {
+
+    /* COLORS */
+    --primaryColor: #EBEFE8;
+    --primaryColorMedium: #94A987;
+    --primaryColorDark: #425139;
+    --secondaryColor: #EBE5E0;
+    --accentColor: #F27405;
+    --hoverButtonColor: #F59037;
+    --disableButtonColor: #b6865c;
+    --backgroundColor: #f5f5f5;
+    --baseTextDarkColor: #3C3C3C;
+
+
+    /* SPACING */
+    --spacing8: 8px;
+    --spacing16: 16px;
+    --spacing24: 24px;
+    --spacing32: 32px;
+    --spacing48: 48px;
+    --spacing64: 64px;
+
+    /* DETAILS */
+    --borderRadius: 10px;
+    --round: 50%;
+    --shadow: 3px 3px 8px gray;
+}
+
+.pædagogiskPersonale {
+    background-color: var(--primaryColorMedium);
+    border-radius: var(--borderRadius);
+    padding: var(--spacing16);
+    margin-bottom: var(--spacing16);
+}
+
+.personaleCards {
+    background-color: var(--primaryColor);
+    border-radius: var(--borderRadius);
+    text-align: center;
+    padding: var(--spacing8);
+}
+
+#personaleCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
