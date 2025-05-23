@@ -56,6 +56,15 @@
 
 .centered {
     text-align: center;
+    margin: auto;
+}
+
+.desktop-img {
+    display: none;
+}
+
+.desktop-text {
+    display: none;
 }
 
 /* --- GENERALS --- */
@@ -871,12 +880,30 @@ a.fep:active {
 
 
 @media only screen and (min-width: 700px) {
-    main {
 
+    h1 {
+        font-size: 2rem;
+
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+
+    }
+
+    main {
+        max-width: 1500px;
         grid-template-columns: 64px repeat(4, 1fr) 64px;
         row-gap: var(--spacing32);
     }
 
+    footer {
+        align-items: center;
+    }
 
     .hero,
     .hero img {
@@ -887,20 +914,60 @@ a.fep:active {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        column-gap: var(--spacing32);
     }
 
+    .desktop-img {
+        display: inline;
+        height: 100%;
+    }
+
+    .desktop-text {
+        display: block;
+    }
+
+    .values {
+        display: block;
+        padding-top: var(--spacing64);
+
+    }
+
+    .value-holder {
+        height: 170px;
+        margin-top: var(--spacing24);
+    }
+
+    .value {
+        width: 250px;
+    }
+
+    .values i {
+        font-size: 1.3rem;
+        bottom: var(--spacing32);
+    }
+
+    .index .fep {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .index .fep img {
+        width: 50%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     main {
-
-        grid-template-columns: 15% repeat(12, 1fr) 15%;
-
+        grid-template-columns: 15% repeat(4, 1fr) 15%;
     }
 
     .hero,
     .hero img {
         height: 500px;
+    }
+
+    .values {
+        height: 110%;
     }
 
 
