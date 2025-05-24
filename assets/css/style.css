@@ -540,6 +540,8 @@ a.fep:active {
     background: var(--primaryColor);
     padding: var(--spacing24);
     border-radius: var(--borderRadius);
+    text-align: center;
+    align-items: center;
 }
 
 .upcomming-citizens .activity h3 {
@@ -897,7 +899,7 @@ a.fep:active {
     }
 
     main {
-        max-width: 1500px;
+        /* max-width: 1500px; */
         grid-template-columns: 64px repeat(4, 1fr) 64px;
         row-gap: var(--spacing32);
     }
@@ -1016,6 +1018,63 @@ a.fep:active {
     a.fep img {
         height: 125px;
     }
+
+    .upcomming-citizens .bento {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        max-height: 400px;
+    }
+
+    .upcomming-citizens .item1 {
+        grid-row: 1/4;
+        grid-column: 1/5;
+        height: 100%;
+    }
+
+    .upcomming-citizens .item2 {
+        grid-row: 1/4;
+        grid-column: 5/7;
+        height: 100%;
+
+    }
+
+    .upcomming-citizens .item3 {
+        grid-row: 4/7;
+        grid-column: 1/4;
+        height: 100%;
+
+    }
+
+    .upcomming-citizens .item4 {
+        grid-row: 4/7;
+        grid-column: 4/7;
+        height: 100%;
+    }
+
+    .reverse-order {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .reverse-order img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .upcomming-citizens .activities {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .upcomming-citizens .activity {
+        width: calc(50% - 16px)
+    }
+
+    .appartment .slideshow-container {
+
+        height: 400px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1048,6 +1107,15 @@ a.fep:active {
         height: 300px;
         right: 0;
         top: 150px;
+    }
+
+    .upcomming-citizens .activities {
+
+        flex-wrap: nowrap;
+    }
+
+    .upcomming-citizens .activity {
+        width: calc(100 / 5 - 16px)
     }
 
 }
