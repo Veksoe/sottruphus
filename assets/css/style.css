@@ -255,6 +255,7 @@ header .modal-content {
     width: 80%;
     position: relative;
     border-radius: var(--borderRadius);
+    max-width: 400px;
 }
 
 header .modal-content form {
