@@ -650,10 +650,10 @@ a.fep:active {
 }
 
 /* --- FAGLIGE TILGANG --- */
-.metoder {
+/* .metoder {
     position: relative;
     width: 100%;
-    /* max-width: 320px; */
+    /* max-width: 320px; 
     height: 200px;
     margin: var(--spacing16) 0;
     border-radius: var(--borderRadius);
@@ -661,9 +661,9 @@ a.fep:active {
     box-shadow: var(--shadow);
     cursor: pointer;
     transition: transform 0.3s ease;
-}
+} */
 
-.metode-dialog {
+/* .metode-dialog {
     border: none;
     border-radius: 10px;
     padding: var(--spacing48) var(--spacing32) var(--spacing32) var(--spacing32);
@@ -675,33 +675,33 @@ a.fep:active {
     font-family: sans-serif;
     animation: fadeIn 0.3s ease;
     margin-top: var(--spacing64);
-}
+} */
 
-.metode-billede {
+/* .metode-billede {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     z-index: -1;
-}
+} */
 
-.metoder .overlay {
+/* .metoder .overlay {
     background:
         linear-gradient(to bottom, rgba(124, 77, 12, 0.4), rgba(97, 55, 7, 0.7));
     width: 100%;
     height: 100%;
-}
+} */
 
-.metode-introbeskrivelse {
+/* .metode-introbeskrivelse {
     color: var(--accentColorDark);
     font-size: 0.95rem;
     padding: var(--spacing16);
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
+} */
 
-.metodeTitel {
+/* .metodeTitel {
     font-size: 1.5rem;
     font-weight: 600;
     position: absolute;
@@ -711,9 +711,9 @@ a.fep:active {
     z-index: 1;
     color: white;
     text-align: center;
-}
+} */
 
-.metode-dialog .modal-close {
+/* .metode-dialog .modal-close {
     position: absolute;
     top: var(--spacing16);
     right: var(--spacing16);
@@ -723,14 +723,14 @@ a.fep:active {
     padding: var(--spacing8);
     box-shadow: none;
 
-}
+} */
 
-.metode-dialog .close:hover,
+/* .metode-dialog .close:hover,
 .metode-dialog .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
+} */
 
 
 /* --- SENESTE NYT--- */
