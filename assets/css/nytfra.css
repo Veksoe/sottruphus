@@ -1,0 +1,213 @@
+
+/* --- VARIABLES --- */
+:root {
+
+    /* COLORS */
+    --primaryColor: #EBEFE8;
+    --primaryColorMedium: #94A987;
+    --primaryColorDark: #425139;
+    --secondaryColor: #EBE5E0;
+    --accentColor: #F27405;
+    --accentColorLight: #FBD5B4;
+    --accentColorDark: #9E4C03;
+    --hoverButtonColor: #F59037;
+    --disableButtonColor: #b6865c;
+    --backgroundColor: #f5f5f5;
+    --baseTextDarkColor: #3C3C3C;
+
+
+    /* SPACING */
+    --spacing8: 8px;
+    --spacing16: 16px;
+    --spacing24: 24px;
+    --spacing32: 32px;
+    --spacing48: 48px;
+    --spacing64: 64px;
+
+    /* DETAILS */
+    --borderRadius: 6px;
+    --round: 50%;
+    --shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
+}
+
+--- SENESTE NYT---
+.news-overview .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing16)
+}
+
+.news-overview .news-container a {
+    text-decoration: none;
+}
+
+.news-overview .news {
+    display: flex;
+    border-radius: var(--borderRadius);
+    gap: var(--spacing8);
+    box-shadow: var(--shadow);
+    transition: .3s; 
+}
+
+.news-overview .news:hover {
+    transform: scale(1.01);
+}
+
+.news-overview a:active .news {
+    transform: scale(.99);
+    box-shadow: var(--shadow);
+
+}
+
+.news-overview .news img {
+    width: 40%;
+    height: 100%;
+    border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+
+}
+
+.news-overview .news p {
+    font-size: .8rem;
+}
+
+.news-overview .news h3 {
+    font-size: .9rem;
+}
+
+.news-page .breadcrums {
+    font-size: .8rem;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.news-page .breadcrums a {
+    text-decoration: none;
+}
+
+.news-page .breadcrums p {
+    margin: 0;
+}
+
+.news-page h2 {
+    margin-bottom: var(--spacing16);
+}
+
+.news-page .date {
+    font-size: .8rem;
+    text-align: right;
+    color: gray;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 24px;
+  }
+ 
+  .content {
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+/* Desktop */ 
+@media (min-width: 700px) {
+    .news-container {
+        grid-template-columns: repeat(3, 1fr);
+        width: 1000px;
+        
+    }
+
+    main section h1 {
+        grid-column: 1 / -1;
+    }
+
+    .news {
+        flex-direction: column; 
+    }
+
+    .news-overview .news img {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--borderRadius)   var(--borderRadius) 0  0;
+    
+    }
+
+    .news-overview a:active .news {
+        transform: scale(.99);
+        box-shadow: none;
+    
+    }
+    .news-container a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: var(--borderRadius);
+        overflow: hidden;
+         box-shadow: var(--shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+
+    .news-container a:hover {
+        transform: translateY(-6px);
+    }
+
+    
+    .news-container a:hover img {
+        transform: scale(1.02);
+    }
+
+    .news .content {
+        padding: var(--spacing16);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .news .content h3 {
+        font-size: 1.3rem;
+        color: var(--primaryColorDark);
+        margin-bottom: var(--spacing8);
+        line-height: 1.4;
+    }
+
+    .news .content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--baseTextDarkColor);
+        margin-bottom: var(--spacing16);
+    }
+
+    .news-overview .news{
+        box-shadow: none;
+    }
+    
+    .nyhedsartiklen {
+            display: flex;
+            flex-direction: column;
+        }
+
+ 
+  .news-page{
+    display: flex;
+    gap: var(--spacing24);
+  }
+
+  .senestNyt{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nyhedsartiklen img{
+    width: 50%;
+    height: auto;
+  }
+}
+
