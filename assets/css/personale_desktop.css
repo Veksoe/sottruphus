@@ -1,0 +1,28 @@
+@media (min-width: 400px) {
+    #pædagogsikPerosnaleGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 600px;
+    }
+
+    #SådanGørVi {}
+}
+
+@media (min-width: 500px) {
+
+    #SådanGørVi,
+    h2+p {
+        text-align: center;
+    }
+}
+
+@media (min-width: 700px) {
+
+    #personaleCardsGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+}
