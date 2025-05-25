@@ -188,26 +188,51 @@
     .news-overview .news{
         box-shadow: none;
     }
+    .news-page {
+        display: flex;
+        gap: var(--spacing24);
+        margin: var(--spacing64);
+      }
+      
+      .nyhedsartiklen {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+      
+      .nyhedsartiklen img {
+        height: 40%;
+      }
+      
+      .senestNyt {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .news-fep {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .news-page a.fep {
+        display: block;
+        text-decoration: none;
+        height: 125px;
+        padding-right: var(--spacing8);
+        border-radius: var(--borderRadius);
     
-    .nyhedsartiklen {
-            display: flex;
-            flex-direction: column;
-        }
+    }
 
- 
-  .news-page{
-    display: flex;
-    gap: var(--spacing24);
-  }
+    .news-page a.fep img {
+        border-radius: var(--borderRadius) 0 0  var(--borderRadius);
+    
+    }
 
-  .senestNyt{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nyhedsartiklen img{
-    width: 50%;
-    height: auto;
-  }
+    .news-page a.fep h3{
+        text-align: left;
+    }
+     
 }
 
