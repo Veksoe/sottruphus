@@ -736,8 +736,8 @@ a.fep:active {
 } */
 
 
-/* --- SENESTE NYT--- */
-.news-overview .news-container {
+--- SENESTE NYT---
+/* .news-overview .news-container {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing16)
@@ -806,7 +806,7 @@ a.fep:active {
     font-size: .8rem;
     text-align: right;
     color: gray;
-}
+} */
 
 /* --- PERSONALE--- */
 
