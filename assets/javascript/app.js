@@ -40,17 +40,23 @@ if (appartmentEl) {
 }
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+// console.log("test")
 window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector("header").style.top = "0";
+    if (window.screen.width < 1200) {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.querySelector("header").style.top = "0";
+        } else {
+            document.querySelector("header").style.top = "-90px";
+
+        }
+        prevScrollpos = currentScrollPos;
+
     } else {
-        document.querySelector("header").style.top = "-90px";
+        document.querySelector("header").style.top = "0";
 
     }
-    prevScrollpos = currentScrollPos;
 }
-
 
 
 function setSlider() {
@@ -86,16 +92,26 @@ function showSliders(n) {
 
 
 const closeMenuModalBtnEl = document.querySelector("header .modal-close")
-const openLoginEl = document.querySelector(".login-btn")
+const openLoginMobilEl = document.querySelector(".mobil-nav .login-btn")
+const openLoginDesktopEl = document.querySelector(".desktop-nav .login-btn")
 const loginModalEl = document.querySelector("dialog")
 const closeMethodModalBtnEl = document.querySelector(".metode-dialog .modal-close")
 
-openLoginEl.addEventListener('click', () => {
+openLoginMobilEl.addEventListener('click', () => {
     loginModalEl.showModal();
+    bodyEl.style.overflow = "hidden";
+
 })
 
+openLoginDesktopEl.addEventListener('click', () => {
+    loginModalEl.showModal();
+    bodyEl.style.overflow = "hidden";
+
+})
 closeMenuModalBtnEl.addEventListener('click', () => {
     closeMenuModalBtnEl.closest('dialog').close();
+    bodyEl.style.overflow = "visible";
+
 })
 
 
