@@ -653,58 +653,63 @@ a.fep:active {
 }
 
 /* --- FAGLIGE TILGANG --- */
-/* .metoder {
+.metoder-wrapper {
+    display: flex;
+    gap: var(--spacing16);
+    flex-direction: column;
+}
+
+.metoder {
     position: relative;
     width: 100%;
-    /* max-width: 320px; 
     height: 200px;
-    margin: var(--spacing16) 0;
     border-radius: var(--borderRadius);
     overflow: hidden;
     box-shadow: var(--shadow);
     cursor: pointer;
     transition: transform 0.3s ease;
-} */
+}
 
-/* .metode-dialog {
+.metode-dialog {
     border: none;
     border-radius: 10px;
     padding: var(--spacing48) var(--spacing32) var(--spacing32) var(--spacing32);
     max-width: 500px;
     width: 90%;
+    max-height: 80vh;
     background: var(--accentColorLight);
     color: var(--accentColorDark);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     font-family: sans-serif;
     animation: fadeIn 0.3s ease;
     margin-top: var(--spacing64);
-} */
+}
 
-/* .metode-billede {
+.metode-billede {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     z-index: -1;
-} */
+}
 
-/* .metoder .overlay {
+.metoder .overlay {
     background:
         linear-gradient(to bottom, rgba(124, 77, 12, 0.4), rgba(97, 55, 7, 0.7));
     width: 100%;
     height: 100%;
-} */
+}
 
-/* .metode-introbeskrivelse {
+.metode-introbeskrivelse {
     color: var(--accentColorDark);
     font-size: 0.95rem;
     padding: var(--spacing16);
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-} */
+}
 
-/* .metodeTitel {
+.metodeTitel {
     font-size: 1.5rem;
     font-weight: 600;
     position: absolute;
@@ -714,9 +719,9 @@ a.fep:active {
     z-index: 1;
     color: white;
     text-align: center;
-} */
+}
 
-/* .metode-dialog .modal-close {
+.metode-dialog .modal-close {
     position: absolute;
     top: var(--spacing16);
     right: var(--spacing16);
@@ -726,18 +731,18 @@ a.fep:active {
     padding: var(--spacing8);
     box-shadow: none;
 
-} */
+}
 
-/* .metode-dialog .close:hover,
+.metode-dialog .close:hover,
 .metode-dialog .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-} */
+}
 
 
---- SENESTE NYT---
-/* .news-overview .news-container {
+/* --- SENESTE NYT--- */
+.news-overview .news-container {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing16)
@@ -806,7 +811,7 @@ a.fep:active {
     font-size: .8rem;
     text-align: right;
     color: gray;
-} */
+}
 
 /* --- PERSONALE--- */
 
@@ -816,6 +821,12 @@ a.fep:active {
     border-radius: var(--borderRadius);
     padding: var(--spacing24);
     margin-bottom: var(--spacing16);
+}
+
+.personelCardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing16);
 }
 
 .personelCards {
@@ -902,7 +913,7 @@ a.fep:active {
     main {
         /* max-width: 1500px; */
         grid-template-columns: 64px repeat(4, 1fr) 64px;
-        row-gap: var(--spacing32);
+        row-gap: var(--spacing64);
     }
 
     footer {
@@ -918,7 +929,7 @@ a.fep:active {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        column-gap: var(--spacing32);
+        column-gap: var(--spacing64);
         position: relative;
     }
 
@@ -1076,11 +1087,180 @@ a.fep:active {
 
         height: 400px;
     }
+
+    .article-card-container {
+        display: block;
+    }
+
+    .the-team {
+        height: 100%;
+        width: 100%;
+        padding: var(--spacing32);
+    }
+
+    .personelCardsContainer {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing32);
+        flex-wrap: wrap;
+    }
+
+    .personelCards {
+        width: calc(100% / 3 - 32px);
+        padding: var(--spacing32);
+    }
+
+
+
+    .news-overview .news {
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .news-overview .news-container a {
+        width: calc(100% / 2 - 32px);
+    }
+
+    .news-overview .news img {
+        width: 100%;
+        height: 200px;
+        border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+
+    }
+
+    .news-overview a:active .news {
+        transform: scale(.99);
+
+    }
+
+
+    .news .content {
+        padding: var(--spacing16);
+    }
+
+    .news .content h3 {
+        font-size: 1.3rem;
+        margin-bottom: var(--spacing8);
+        margin-top: 0;
+    }
+
+    .news .content p {
+        font-size: 1rem;
+    }
+
+
+    .news-page {
+        display: flex;
+        gap: var(--spacing24);
+        margin: var(--spacing64);
+    }
+
+    .nyhedsartiklen {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nyhedsartiklen img {
+        height: 40%;
+    }
+
+    .senestNyt {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news-fep {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .news-page a.fep {
+        display: block;
+        text-decoration: none;
+        height: 125px;
+        padding-right: var(--spacing8);
+        border-radius: var(--borderRadius);
+    }
+
+    .news-page a.fep img {
+        border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+    }
+
+    .news-page a.fep h3 {
+        text-align: left;
+    }
+
+    .metoder-wrapper {
+        gap: var(--spacing32);
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .metoder {
+        width: calc(100% / 3 - 32px);
+        height: 250px;
+    }
+
+    .metodeTitel {
+        font-size: 1.3rem;
+    }
+
+    .metode-introbeskrivelse {
+        font-size: 0.85rem;
+    }
+
+    .metoder:hover {
+        transform: scale(1.03);
+    }
+
+    .hover-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background-color: var(--accentColorLight);
+        transition: height 0.4s ease-in-out;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .metoder:hover .metodeTitel {
+        display: none;
+    }
+
+    .metoder:hover .hover-overlay {
+        height: 100%;
+    }
+
+    .metoder:hover .metode-introbeskrivelse {
+        opacity: 1;
+    }
+
+    .metode-dialog {
+        max-width: none;
+        width: 800px;
+        max-height: 80vh;
+        padding: 3rem;
+    }
+
+    .metode-dialog img {
+        height: 350px;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
     main {
-        grid-template-columns: 15% repeat(4, 1fr) 15%;
+        grid-template-columns: 10% repeat(4, 1fr) 10%;
+        row-gap: 100px;
     }
 
     .hero,
@@ -1119,9 +1299,28 @@ a.fep:active {
         width: calc(100 / 5 - 16px)
     }
 
+    .the-team {
+        margin: auto;
+        width: 400px;
+        padding: var(--spacing48);
+    }
+
+    .news-overview .news {
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .news-overview .news-container a {
+        width: calc(100% / 3 - 32px);
+    }
+
 }
 
 @media only screen and (min-width: 1400px) {
+    main {
+        grid-template-columns: 15% repeat(4, 1fr) 15%;
+    }
+
     .floating-img {
 
         width: 450px;

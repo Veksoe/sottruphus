@@ -15,8 +15,6 @@
 
     <script src="./assets/javascript/app.js" defer></script>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/personale_desktop.css">
-    <link rel="stylesheet" href="./assets/css/Personale.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -58,14 +56,19 @@
     </header>
     <main>
         <section class="hero fullWidth">
-            <img src="./assets/img/ukendt" alt=" ">
+            <img src="./assets/img/ukendt" alt=" " class="fullWidth">
         </section>
         <section>
-            <h1>Vores personale</h1>
-            <p>På Søttruphus arbejder vi hver dag for at give vores beboere de bedste betingelser for trivsel, udvikling
-                og tryghed. Det gør vi gennem en stærk personalesammensætning og et tæt samarbejde på tværs af
-                faggrupper. Vores medarbejdere bringer forskellige faglige kompetencer i spil, og sammen løfter vi de
-                daglige opgaver med omsorg, engagement og respekt.</p>
+            <div>
+                <h1>Vores personale</h1>
+                <p>På Søttruphus arbejder vi hver dag for at give vores beboere de bedste betingelser for trivsel,
+                    udvikling
+                    og tryghed. Det gør vi gennem en stærk personalesammensætning og et tæt samarbejde på tværs af
+                    faggrupper. Vores medarbejdere bringer forskellige faglige kompetencer i spil, og sammen løfter vi
+                    de
+                    daglige opgaver med omsorg, engagement og respekt.</p>
+            </div>
+            <img src="./assets/img/ukendt" alt="" class="desktop-img">
         </section>
         <section>
             <article class="the-team">
@@ -89,12 +92,13 @@
                 </ul>
             </article>
         </section>
-        <section id="SådanGørVi">
-            <h2>Det gør vi</h2>
-            <p>Vi arbejder målrettet med en pædagogisk tilgang, der tager udgangspunkt i den enkelte beboers behov,
+        <section>
+            <h2 class="fullWidth centered">Det gør vi</h2>
+            <p class="fullWidth centered">Vi arbejder målrettet med en pædagogisk tilgang, der tager udgangspunkt i den
+                enkelte beboers behov,
                 ønsker og ressourcer. Vores arbejde bygger på strukturerede og evidensbaserede metoder, hvor der er
                 fokus på at skabe forudsigelighed, tryghed og meningsfulde relationer.</p>
-            <div id="personelCardsGrid">
+            <div class="fullWidth personelCardsContainer ">
                 <article class="personelCards">
                     <i class="fa-solid fa-house-user"></i>
                     <h3>Praktisk hjælp</h3>
