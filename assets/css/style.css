@@ -875,6 +875,7 @@ a.fep:active {
 
 .contact-page .team-card img {
     border-radius: 2px;
+    height: 200px;
 }
 
 .contact-page .team-card h4,
@@ -1193,6 +1194,10 @@ a.fep:active {
         text-align: left;
     }
 
+    .news-page .breadcrums {
+        margin: var(--spacing16) 0;
+    }
+
     .metoder-wrapper {
         gap: var(--spacing32);
         flex-direction: row;
@@ -1255,6 +1260,33 @@ a.fep:active {
         height: 350px;
     }
 
+    .contact-page .contact-intro {
+        margin-top: var(--spacing64);
+
+    }
+
+    .contact-page .contact-intro h1 {
+        grid-column: 1/2;
+
+    }
+
+    .contact-page .contact-intro .item1 {
+        grid-column: 1/2;
+    }
+
+    .contact-page .contact-intro .item2 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .contact-page .contact-intro img {
+        max-height: 400px;
+        grid-row: 1/4;
+    }
+
+    .contact-page .team-container .team-card {
+        width: calc(100% / 3 - 16px);
+    }
 }
 
 @media only screen and (min-width: 1200px) {
