@@ -184,6 +184,7 @@ button {
     background: none;
     box-shadow: var(--shadow);
     color: var(--accentColor);
+    transition: .3s;
 
 }
 
@@ -195,9 +196,15 @@ a.btn {
     box-shadow: var(--shadow);
     color: var(--accentColor);
     text-decoration: none;
+    transition: .3s;
 }
 
-a .btn:hover {}
+
+
+a.btn:active,
+button:active {
+    transform: scale(0.99);
+}
 
 button.mobil-menu {
     background: none;
@@ -235,6 +242,10 @@ button.mobil-menu-close {
     transform: translateX(110%);
     align-items: center;
     z-index: 2;
+}
+
+header .desktop-nav {
+    display: none;
 }
 
 nav a {
@@ -366,6 +377,13 @@ a.fep {
     align-items: center;
     transition: .3s;
     margin: var(--spacing24) 0;
+    transition: .3s;
+}
+
+
+
+a.fep:active {
+    transform: scale(.99);
 }
 
 a.fep img {
@@ -667,7 +685,12 @@ a.fep:active {
     overflow: hidden;
     box-shadow: var(--shadow);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
+
+}
+
+.metoder:active {
+    transform: scale(0.95);
 }
 
 .metode-dialog {
@@ -699,6 +722,8 @@ a.fep:active {
     width: 100%;
     height: 100%;
 }
+
+
 
 .metode-introbeskrivelse {
     color: var(--accentColorDark);
@@ -733,12 +758,7 @@ a.fep:active {
 
 }
 
-.metode-dialog .close:hover,
-.metode-dialog .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 
 
 /* --- SENESTE NYT--- */
@@ -751,6 +771,7 @@ a.fep:active {
 .news-overview .news-container a {
 
     text-decoration: none;
+    transition: .3s;
 }
 
 .news-overview .news {
@@ -762,14 +783,9 @@ a.fep:active {
     transition: .3s;
 }
 
-.news-overview .news:hover {
-    transform: scale(1.01);
-}
 
-.news-overview a:active .news {
+.news-overview a:active {
     transform: scale(.99);
-    box-shadow: var(--shadow);
-
 }
 
 .news-overview .news img {
@@ -811,6 +827,11 @@ a.fep:active {
     font-size: .8rem;
     text-align: right;
     color: gray;
+}
+
+.senestNyt a:active {
+    transform: scale(.95);
+
 }
 
 /* --- PERSONALE--- */
@@ -911,10 +932,16 @@ a.fep:active {
 
     }
 
+
     main {
-        /* max-width: 1500px; */
         grid-template-columns: 64px repeat(4, 1fr) 64px;
         row-gap: var(--spacing64);
+    }
+
+    a.btn:hover,
+    button:hover {
+        background: var(--accentColor);
+        color: white;
     }
 
     footer {
@@ -1021,6 +1048,10 @@ a.fep:active {
 
     .fep-container {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    a.fep:hover {
+        transform: scale(1.01);
     }
 
     a.fep h3 {
@@ -1153,7 +1184,12 @@ a.fep:active {
     .news-page {
         display: flex;
         gap: var(--spacing24);
-        margin: var(--spacing64);
+        margin-left: var(--spacing64);
+        margin-right: var(--spacing64);
+    }
+
+    .news-content {
+        margin: 0 auto;
     }
 
     .nyhedsartiklen {
@@ -1165,6 +1201,10 @@ a.fep:active {
 
     .nyhedsartiklen img {
         height: 40%;
+    }
+
+    .news-overview .news:hover {
+        transform: scale(1.01);
     }
 
     .senestNyt {
@@ -1220,6 +1260,12 @@ a.fep:active {
 
     .metoder:hover {
         transform: scale(1.03);
+    }
+
+    .metode-dialog .close:hover {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
     }
 
     .hover-overlay {
@@ -1290,6 +1336,47 @@ a.fep:active {
 }
 
 @media only screen and (min-width: 1200px) {
+
+    header .mobil-menu,
+    header .mobil-nav {
+        display: none;
+    }
+
+    header .desktop-nav {
+        display: flex;
+        gap: var(--spacing32);
+        align-items: center;
+    }
+
+    header .desktop-nav a {
+        position: relative;
+    }
+
+    header .desktop-nav a:after {
+        content: "";
+        /* underline width */
+        width: 100%;
+        /* underline height */
+        height: 2px;
+        /* underline color */
+        background: var(--accentColor);
+        /* underline position */
+        position: absolute;
+        /* underline position */
+        left: 0;
+        bottom: 0;
+        /* scale of underline when not hovering */
+        transform: scaleX(0);
+        /* animate tranform over .25 seconds with ease-in animation type */
+        transition: transform 0.25s ease-in;
+    }
+
+    header .desktop-nav a:hover:after {
+        /* scale of underline while hovering */
+        transform: scaleX(1);
+    }
+
+
     main {
         grid-template-columns: 10% repeat(4, 1fr) 10%;
         row-gap: 100px;
@@ -1337,6 +1424,11 @@ a.fep:active {
         padding: var(--spacing48);
     }
 
+    .news-page {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     .news-overview .news {
         flex-direction: column;
         height: 400px;
@@ -1345,6 +1437,7 @@ a.fep:active {
     .news-overview .news-container a {
         width: calc(100% / 3 - 32px);
     }
+
 
 }
 
