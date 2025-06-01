@@ -1,226 +1,334 @@
 <!DOCTYPE html>
 <html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="-" />
+    <!--UPDATE-->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="-"> <!--UPDATE-->
+    <title>Til Kommende Beboere - Søttruphus</title>
+    <!--UPDATE-->
 
-    <title>Til Kommende Beboere - Søttruphus</title> <!--UPDATE-->
-
-    <link rel="icon" type="image/x-icon" href="./assets/img/Søttruphus_favicon.svg">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/img/Søttruphus_favicon.svg"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/javascript/app.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      (function (c, s, q, u, a, r, e) {
+        c.hj =
+          c.hj ||
+          function () {
+            (c.hj.q = c.hj.q || []).push(arguments);
+          };
+        c._hjSettings = { hjid: a };
+        r = s.getElementsByTagName("head")[0];
+        e = s.createElement("script");
+        e.async = true;
+        e.src = q + c._hjSettings.hjid + u;
+        r.appendChild(e);
+      })(
+        window,
+        document,
+        "https://static.hj.contentsquare.net/c/csq-",
+        ".js",
+        6415357
+      );
+    </script>
+  </head>
 
-<body>
+  <body>
     <header class="fullWidth">
-        <a href="./index.html" class="logo"><img src="./assets/img/Søttruphus_logo.svg" alt="Søttruphus Logo"
-                height="50px"></a>
-        <button class="mobil-menu"><i class="fa-solid fa-bars"></i></button>
-        <nav class="mobil-nav">
-            <a href="./index.html" class="logo"><img src="./assets/img/Søttruphus_logo.svg" alt="Søttruphus Logo"
-                    height="50px"></a>
-            <button class="mobil-menu-close"><i class="fa-solid fa-xmark"></i></button>
-            <button class="login-btn"><i class="fa-solid fa-user"></i> Log ind</button>
-            <a href="./hvem-er-vi.html">Hvem er vi?</a>
-            <a href="./personale.html">Personale</a>
-            <a href="./til-kommende-beboere.html">Til kommende beboere</a>
-            <a href="./faglig-tilgang.html">Faglige tilgange </a>
-            <a href="./nyt-fra-sotruphus.html">Nyt fra Søttruphus</a>
-            <a href="./kontakt.html">Kontakt</a>
-        </nav>
-        <dialog class="modal-content">
-            <!-- Modal content -->
+      <a href="./index.html" class="logo"
+        ><img
+          src="./assets/img/Søttruphus_logo.svg"
+          alt="Søttruphus Logo"
+          height="50px"
+      /></a>
+      <button class="mobil-menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="mobil-nav">
+        <a href="./index.html" class="logo"
+          ><img
+            src="./assets/img/Søttruphus_logo.svg"
+            alt="Søttruphus Logo"
+            height="50px"
+        /></a>
+        <button class="mobil-menu-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <button class="login-btn">
+          <i class="fa-solid fa-user"></i> Log ind
+        </button>
+        <a href="./hvem-er-vi.html">Hvem er vi?</a>
+        <a href="./personale.html">Personale</a>
+        <a href="./til-kommende-beboere.html">Til kommende beboere</a>
+        <a href="./faglig-tilgang.html">Faglige tilgange </a>
+        <a href="./nyt-fra-sotruphus.html">Nyt fra Søttruphus</a>
+        <a href="./kontakt.html">Kontakt</a>
+      </nav>
+      <dialog class="modal-content">
+        <!-- Modal content -->
 
-            <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
-            <img src="./assets/img/Søttruphus_logo.svg" alt="" class="logo">
-            <h2>Login</h2>
-            <form>
-                <label for="email" class="bold">Email</label>
-                <input type="text" id="email" name="email">
-                <label for="password" class="bold">Password</label>
-                <input type="text" id="password" name="password">
-                <a href="#">Glemt din kode?</a>
-                <input type="submit" value="Log ind" class="bold">
-            </form>
-
-        </dialog>
+        <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+        <img src="./assets/img/Søttruphus_logo.svg" alt="" class="logo" />
+        <h2>Login</h2>
+        <form>
+          <label for="email" class="bold">Email</label>
+          <input type="text" id="email" name="email" />
+          <label for="password" class="bold">Password</label>
+          <input type="text" id="password" name="password" />
+          <a href="#">Glemt din kode?</a>
+          <input type="submit" value="Log ind" class="bold" />
+        </form>
+      </dialog>
     </header>
 
     <main class="upcomming-citizens">
-        <section class="hero fullWidth">
-            <img src="./assets/img/ansat_beboer_gar_ude.jpg" alt="Søttruphus' facade " class="fullWidth">
-        </section>
-        <section>
-            <div>
-                <h1>Hvad tilbyder vi?</h1>
-                <p>På Søttruphus lægger vi vægt på at skabe en meningsfuld og varieret hverdag. Vi er et bosted for
-                    voksne
-                    med autismespektrumforstyrrelser og tilbyder en bred vifte af aktiviteter, som beboerne kan vælge
-                    imellem – med fokus på det, der interesserer og motiverer den enkelte. Der er blandt andet mulighed
-                    for
-                    at være kreativ i værkstedet, spille eller lytte til musik, deltage i madlavning og meget mere.</p>
-                <p>Hverdagen byder også på oplevelser i det fri. Søttruphus ligger naturskønt med adgang til store
-                    udearealer, hvor der er plads til både ro og bevægelse. Her kan man gå ture, cykle eller bare nyde
-                    haven. Vi afholder desuden fælles arrangementer i løbet af året, som skaber fællesskab og styrker
-                    relationer – f.eks. vores årlige julearrangement med beboere og pårørende.</p>
-            </div>
+      <section class="hero fullWidth">
+        <img
+          src="./assets/img/ansat_beboer_gar_ude.jpg"
+          alt="Søttruphus' facade "
+          class="fullWidth"
+        />
+      </section>
+      <section>
+        <div>
+          <h1>Hvad tilbyder vi?</h1>
+          <p>
+            På Søttruphus lægger vi vægt på at skabe en meningsfuld og varieret
+            hverdag. Vi er et bosted for voksne med autismespektrumforstyrrelser
+            og tilbyder en bred vifte af aktiviteter, som beboerne kan vælge
+            imellem – med fokus på det, der interesserer og motiverer den
+            enkelte. Der er blandt andet mulighed for at være kreativ i
+            værkstedet, spille eller lytte til musik, deltage i madlavning og
+            meget mere.
+          </p>
+          <p>
+            Hverdagen byder også på oplevelser i det fri. Søttruphus ligger
+            naturskønt med adgang til store udearealer, hvor der er plads til
+            både ro og bevægelse. Her kan man gå ture, cykle eller bare nyde
+            haven. Vi afholder desuden fælles arrangementer i løbet af året, som
+            skaber fællesskab og styrker relationer – f.eks. vores årlige
+            julearrangement med beboere og pårørende.
+          </p>
+        </div>
 
-            <div class="bento">
-                <img src="./assets/img/Vandring_I_Byomrade.JPG" alt="" class="item1">
-                <img src="./assets/img/Gatur_i_skoven.jpg" alt="" class="item2">
-                <img src="./assets/img/Maler.jpg" alt="" class="item3">
-                <img src="./assets/img/Kollega_guitar.jpg" alt="" class="item4 desktop-img">
-            </div>
-        </section>
+        <div class="bento">
+          <img
+            src="./assets/img/Vandring_I_Byomrade.JPG"
+            alt=""
+            class="item1"
+          />
+          <img src="./assets/img/Gatur_i_skoven.jpg" alt="" class="item2" />
+          <img src="./assets/img/Maler.jpg" alt="" class="item3" />
+          <img
+            src="./assets/img/Kollega_guitar.jpg"
+            alt=""
+            class="item4 desktop-img"
+          />
+        </div>
+      </section>
 
-        <section class="reverse-order">
-            <div>
-                <h2>Hverdag med struktur og nærvær</h2>
-                <p>Hverdagen på Søttruphus bygger på en autismepædagogisk tilgang, hvor struktur, forudsigelighed og
-                    tydelige rammer er med til at skabe tryghed. Vi arbejder med faste ugeskemaer og visuel støtte, som
-                    hjælper den enkelte med at navigere i hverdagen og få overblik.</p>
-                <p>Den pædagogiske indsats tilpasses beboerens behov, og støtten gives med respekt for individuelle
-                    grænser
-                    og dagsform. Nogle har brug for en detaljeret dagsplan, andre for fleksibilitet og ro. Fælles er, at
-                    vi
-                    møder beboeren med nærvær og forståelse – og støtter udviklingen af selvstændighed og trivsel i eget
-                    tempo.</p>
-            </div>
-            <img src="./assets/img/Etbilledeaf_beboerogansat_dersiddersammen.jpg"
-                alt="Beboer der sidder med en computer sammen med en ansat.">
-        </section>
-        <section>
-            <h2 class="fullWidth centered">Ugens struktur</h2>
-            <p class="fullWidth centered">Vi arbejder med faste rammer og genkendelige aktiviteter, som skaber tryghed
-                og
-                struktur for
-                vores
-                beboere. Planen tilpasses individuelt og indeholder både daglige rutiner, fælles aktiviteter og tid til
-                ro, med fri mulighed for at sige fra. Hver dag er der gå tur for dem der har lyst, og ugen byder på
-                forskellige aktiviteter som kreative dage, havedag og
-                svømning.</p>
-            <div class="activities fullWidth">
-                <article class="activity">
-                    <i class="fa-solid fa-person-swimming"></i>
-                    <h3>Mandag</h3>
-                    <p class="day-type">Svømmedag</p>
-                    <p>Vi besøger svømmehallen med fokus på bevægelse og sanseoplevelser.</p>
-                </article>
-                <article class="activity">
-                    <i class="fa-solid fa-puzzle-piece"></i>
-                    <h3>Tirsdag</h3>
-                    <p class="day-type">Kassedag</p>
-                    <p>Dagen byder på puslespil og opgaver, der træner koncentration.</p>
-                </article>
-                <article class="activity">
-                    <i class="fa-solid fa-palette"></i>
-                    <h3>Onsdag</h3>
-                    <p class="day-type">Kreadag</p>
-                    <p>Vi arbejder med kreative projekter som maling, perler og klippe-klistre</p>
-                </article>
-                <article class="activity">
-                    <i class="fa-solid fa-seedling"></i>
-                    <h3>Torsdag</h3>
-                    <p class="day-type">Havedag</p>
-                    <p>Udendørs aktiviteter med planter og havearbejde i roligt fællesskab.</p>
-                </article>
-                <article class="activity">
-                    <i class="fa-solid fa-couch"></i>
-                    <h3>Fredag</h3>
-                    <p class="day-type">Afslapningsdag</p>
-                    <p>Ugen afsluttes med rolige aktiviteter, hvor beboerne selv vælger</p>
-                </article>
-            </div>
-        </section>
-        <section>
-            <div>
-                <h2>En lejlighed, der bliver deres eget hjem</h2>
-                <p>På Søttruphus får hver beboer sin egen lejlighed – et privat, trygt og personligt rum.</p>
-                <p class="bold">Hver lejlighed indeholder:</p>
-                <div class="bullet">
-                    <i class="fa-solid fa-bath"></i>
-                    <p>Eget badeværelse</p>
-                </div>
-                <div class="bullet">
-                    <i class="fa-solid fa-couch"></i>
-                    <p>Kombineret stue- og soveområde</p>
-                </div>
-                <div class="bullet">
-                    <i class="fa-solid fa-star"></i>
-                    <p>Indrettes efter beboerens ønsker og giver plads til både personlige ejendele og hyggelige rammer.
-                    </p>
-                </div>
-            </div>
+      <section class="reverse-order">
+        <div>
+          <h2>Hverdag med struktur og nærvær</h2>
+          <p>
+            Hverdagen på Søttruphus bygger på en autismepædagogisk tilgang, hvor
+            struktur, forudsigelighed og tydelige rammer er med til at skabe
+            tryghed. Vi arbejder med faste ugeskemaer og visuel støtte, som
+            hjælper den enkelte med at navigere i hverdagen og få overblik.
+          </p>
+          <p>
+            Den pædagogiske indsats tilpasses beboerens behov, og støtten gives
+            med respekt for individuelle grænser og dagsform. Nogle har brug for
+            en detaljeret dagsplan, andre for fleksibilitet og ro. Fælles er, at
+            vi møder beboeren med nærvær og forståelse – og støtter udviklingen
+            af selvstændighed og trivsel i eget tempo.
+          </p>
+        </div>
+        <img
+          src="./assets/img/Etbilledeaf_beboerogansat_dersiddersammen.jpg"
+          alt="Beboer der sidder med en computer sammen med en ansat."
+        />
+      </section>
+      <section>
+        <h2 class="fullWidth centered">Ugens struktur</h2>
+        <p class="fullWidth centered">
+          Vi arbejder med faste rammer og genkendelige aktiviteter, som skaber
+          tryghed og struktur for vores beboere. Planen tilpasses individuelt og
+          indeholder både daglige rutiner, fælles aktiviteter og tid til ro, med
+          fri mulighed for at sige fra. Hver dag er der gå tur for dem der har
+          lyst, og ugen byder på forskellige aktiviteter som kreative dage,
+          havedag og svømning.
+        </p>
+        <div class="activities fullWidth">
+          <article class="activity">
+            <i class="fa-solid fa-person-swimming"></i>
+            <h3>Mandag</h3>
+            <p class="day-type">Svømmedag</p>
+            <p>
+              Vi besøger svømmehallen med fokus på bevægelse og sanseoplevelser.
+            </p>
+          </article>
+          <article class="activity">
+            <i class="fa-solid fa-puzzle-piece"></i>
+            <h3>Tirsdag</h3>
+            <p class="day-type">Kassedag</p>
+            <p>
+              Dagen byder på puslespil og opgaver, der træner koncentration.
+            </p>
+          </article>
+          <article class="activity">
+            <i class="fa-solid fa-palette"></i>
+            <h3>Onsdag</h3>
+            <p class="day-type">Kreadag</p>
+            <p>
+              Vi arbejder med kreative projekter som maling, perler og
+              klippe-klistre
+            </p>
+          </article>
+          <article class="activity">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Torsdag</h3>
+            <p class="day-type">Havedag</p>
+            <p>
+              Udendørs aktiviteter med planter og havearbejde i roligt
+              fællesskab.
+            </p>
+          </article>
+          <article class="activity">
+            <i class="fa-solid fa-couch"></i>
+            <h3>Fredag</h3>
+            <p class="day-type">Afslapningsdag</p>
+            <p>
+              Ugen afsluttes med rolige aktiviteter, hvor beboerne selv vælger
+            </p>
+          </article>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>En lejlighed, der bliver deres eget hjem</h2>
+          <p>
+            På Søttruphus får hver beboer sin egen lejlighed – et privat, trygt
+            og personligt rum.
+          </p>
+          <p class="bold">Hver lejlighed indeholder:</p>
+          <div class="bullet">
+            <i class="fa-solid fa-bath"></i>
+            <p>Eget badeværelse</p>
+          </div>
+          <div class="bullet">
+            <i class="fa-solid fa-couch"></i>
+            <p>Kombineret stue- og soveområde</p>
+          </div>
+          <div class="bullet">
+            <i class="fa-solid fa-star"></i>
+            <p>
+              Indrettes efter beboerens ønsker og giver plads til både
+              personlige ejendele og hyggelige rammer.
+            </p>
+          </div>
+        </div>
 
-            <!-- Tredjeparts kode: https://codepen.io/Tsung2018/pen/Xqmbxp -->
-            <div class="appartment">
-                <h3>Din nye lejlighed</h3>
+        <!-- Tredjeparts kode: https://codepen.io/Tsung2018/pen/Xqmbxp -->
+        <div class="appartment">
+          <h3>Din nye lejlighed</h3>
 
-                <div class="slideshow-container">
-                    <img class="manual-slider sliders" src="./assets/img/badeværelse_i_lejlighed.jpg" alt="">
-                    <img class="manual-slider sliders" src="./assets/img/gammelt-varelse.jpg" alt="">
-                    <img class="manual-slider sliders" src="./assets/img/renoveret_badeværelse.jpg" alt="">
-                    <img class="manual-slider sliders" src="./assets/img/stue-lejlighed.jpg" alt="">
-                    <img class="manual-slider sliders" src="./assets/img/varelse-lejlighed.jpg" alt="">
+          <div class="slideshow-container">
+            <img
+              class="manual-slider sliders"
+              src="./assets/img/badeværelse_i_lejlighed.jpg"
+              alt=""
+            />
+            <img
+              class="manual-slider sliders"
+              src="./assets/img/gammelt-varelse.jpg"
+              alt=""
+            />
+            <img
+              class="manual-slider sliders"
+              src="./assets/img/renoveret_badeværelse.jpg"
+              alt=""
+            />
+            <img
+              class="manual-slider sliders"
+              src="./assets/img/stue-lejlighed.jpg"
+              alt=""
+            />
+            <img
+              class="manual-slider sliders"
+              src="./assets/img/varelse-lejlighed.jpg"
+              alt=""
+            />
 
-                    <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-                <div>
-                    <span class="dot" onclick="currentSlider(1)"></span>
-                    <span class="dot" onclick="currentSlider(2)"></span>
-                    <span class="dot" onclick="currentSlider(3)"></span>
-                    <span class="dot" onclick="currentSlider(4)"></span>
-                    <span class="dot" onclick="currentSlider(5)"></span>
-                </div>
-            </div>
-        </section>
-        <section class="fep-container">
-            <a href="./personale.html" class="fep">
-                <img src="./assets/img/ukendt" alt="">
-                <h3>Personale</h3>
-            </a>
-            <a href="./faglig-tilgang.html" class="fep">
-                <img src="./assets/img/Teamwork.jpg" alt="">
-                <h3>Faglige tilgange</h3>
-            </a>
-            <a href="./hvem-er-vi.html" class="fep">
-                <img src="./assets/img/Personer_Der_Cykler.JPG" alt="">
-                <h3>Hvem er vi?</h3>
-            </a>
-        </section>
-
+            <button class="prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <div>
+            <span class="dot" onclick="currentSlider(1)"></span>
+            <span class="dot" onclick="currentSlider(2)"></span>
+            <span class="dot" onclick="currentSlider(3)"></span>
+            <span class="dot" onclick="currentSlider(4)"></span>
+            <span class="dot" onclick="currentSlider(5)"></span>
+          </div>
+        </div>
+      </section>
+      <section class="fep-container">
+        <a href="./personale.html" class="fep">
+          <img src="./assets/img/ukendt" alt="" />
+          <h3>Personale</h3>
+        </a>
+        <a href="./faglig-tilgang.html" class="fep">
+          <img src="./assets/img/Teamwork.jpg" alt="" />
+          <h3>Faglige tilgange</h3>
+        </a>
+        <a href="./hvem-er-vi.html" class="fep">
+          <img src="./assets/img/Personer_Der_Cykler.JPG" alt="" />
+          <h3>Hvem er vi?</h3>
+        </a>
+      </section>
     </main>
 
     <footer>
-        <a href="./index.html" class="logo"><img src="./assets/img/Søttruphus_logo.svg" alt="Søttruphus Logo"
-                height="50px"></a>
+      <a href="./index.html" class="logo"
+        ><img
+          src="./assets/img/Søttruphus_logo.svg"
+          alt="Søttruphus Logo"
+          height="50px"
+      /></a>
 
-        <a href="#">Cookie og Privatlivspolitik</a>
+      <a href="#">Cookie og Privatlivspolitik</a>
+      <div>
+        <i class="fa-solid fa-house"></i>
+        <p>Vester Søttrup Vej 36, 9600 Aars</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+4598661180">98 66 11 80</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-envelope"></i>
         <div>
-            <i class="fa-solid fa-house"></i>
-            <p>Vester Søttrup Vej 36,
-                9600 Aars</p>
+          <p>Konst. forstander Lone Kastberg</p>
+          <a href="mailto:forstander@soettruphus.dk"
+            >Mail: forstander@soettruphus.dk</a
+          >
         </div>
-        <div>
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+4598661180">98 66 11 80</a>
-        </div>
-        <div>
-            <i class="fa-solid fa-envelope"></i>
-            <div>
-                <p>Konst. forstander Lone Kastberg</p>
-                <a href="mailto:forstander@soettruphus.dk">Mail: forstander@soettruphus.dk</a>
-            </div>
-        </div>
-
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
